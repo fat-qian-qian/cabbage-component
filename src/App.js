@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Box, Button, Link } from '@chakra-ui/react';
 import { DataTable } from './DataTable';
 const App = () => {
   const [selectedProducts, setSelectedProducts] = useState([]);
   
-  const columns = React.useMemo(
+  const columns = useMemo(
     () => [
       { header: 'Code', accessorKey: 'code' },
       { header: 'Name', accessorKey: 'name' },
